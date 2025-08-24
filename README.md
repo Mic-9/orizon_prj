@@ -26,9 +26,9 @@ All endpoints are prefixed with `/api`.
 
 The `GET /api/viaggi` endpoint supports dynamic filtering using the following query parameters:
 
--   `paese_id`: Filter trips by country ID.
-    -   **Example:** `GET /api/viaggi?paese_id=5`
+-   `paese_id[]`: Filter trips by country IDs.
+    -   **Example:** `GET /api/viaggi?paese_id[]=5&paese_id[]=6`
 -   `posti_disponibili`: Filter trips by a minimum number of available seats.
     -   **Example:** `GET /api/viaggi?posti_disponibili=10`
 -   **Combined Filters:**
-    -   **Example:** `GET /api/viaggi?paese_id=5&posti_disponibili=10`
+    -   **Example:** `GET /api/viaggi?paese_id[]=5&paese_id[]=6&posti_disponibili=10`
